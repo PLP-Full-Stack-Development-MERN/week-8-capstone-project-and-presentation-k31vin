@@ -1,0 +1,63 @@
+# Node.js dependencies
+/node_modules
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+/dist
+/build
+/.next
+/out
+/.nuxt
+/public
+
+# Static files
+/static
+
+# Coverage
+/coverage
+*.lcov
+
+# IDEs and editors
+/.idea/
+/.vscode/
+/*.sublime-project
+/*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+/.nyc_output
