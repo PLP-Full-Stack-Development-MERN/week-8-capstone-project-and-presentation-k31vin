@@ -1,147 +1,182 @@
-**Week 8: Capstone Project - Building Your Final MERN Application**
 
-**Objective:**
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://week-8-capstone-project-and-presentation-k31vin.vercel.app)
 
-- Apply your knowledge of the MERN stack to build a full-fledged application.
-- Demonstrate your understanding of project planning, architecture, and deployment.
-- Develop a comprehensive portfolio project to showcase your skills.
+# NutriConnect 
 
-**Project Overview:**
+NutriConnect is a comprehensive nutrition management application designed specifically for pregnant women, providing personalized meal plans, health tracking, expert communication, and educational resources.
 
-Your task is to design, architect, and present a full-stack MERN application of your choice. This final project should reflect the culmination of all concepts learned throughout the course, including front-end and back-end integration, authentication, CRUD operations, and deployment.
+## 🌟 Features
 
-**Guidelines:**
+### For Clients (Pregnant Women)
+- **Personalized Meal Plans**: Access tailored nutrition plans based on pregnancy stage and health needs
+- **Health Monitoring**: Track vital health metrics including weight, blood pressure, and blood sugar
+- **Expert Communication**: Direct messaging with certified nutritionists
+- **Educational Resources**: Access pregnancy nutrition articles and guides
 
-### 1. **Project Selection**
-Choose a project idea that aligns with your interests and skills. Some examples include:
+### For Nutritionists
+- **Client Management**: Oversee multiple clients and their nutritional needs
+- **Custom Meal Plan Creation**: Design personalized meal plans for each client
+- **Health Data Analysis**: Review client vital statistics and progress
+- **Direct Communication**: Message clients to provide guidance and support
 
-- **E-commerce Store** – Users can browse products, add items to the cart, and checkout.
-- **Task Management App** – Users can create, edit, and organize their tasks.
-- **Social Media Platform** – Users can post content, comment, and interact with others.
-- **Portfolio Website** – Showcase your projects, experience, and skills.
+### For Administrators
+- **User Management**: Oversee client and nutritionist accounts
+- **Content Management**: Manage educational resources
+- **Platform Monitoring**: Track system usage and performance
 
-**Pro Tip:** Choose a project that highlights your unique strengths and interests.
+## 🛠️ Technical Architecture
 
----
+### Frontend
+- **Framework**: React with TypeScript
+- **UI Components**: Shadcn UI and Tailwind CSS
+- **State Management**: React Context API and React Query
+- **Routing**: React Router Dom
+- **Data Visualization**: Recharts
 
-### 2. **Project Planning**
+### Backend
+- **Server**: Express.js
+- **API**: RESTful endpoints for all major features
+- **Authentication**: JWT-based authentication
 
-**Deliverables:**
+## 📊 Data Models
 
-- **Project Proposal:**
-  - Define the problem you are solving.
-  - Identify key features.
-  - Outline the expected user journey.
-  
-- **Wireframes & UI Designs:**
-  - Use tools like Figma or Canva to visualize your application.
-  - Ensure intuitive navigation and responsive design.
+### Users
+- Clients (pregnant women)
+- Nutritionists
+- Administrators
 
-- **Technical Requirements:**
-  - Define the database schema (collections and relationships).
-  - Identify third-party services (e.g., Stripe for payments, Firebase for authentication).
+### Meal Plans
+- Daily meal schedules
+- Nutritional information
+- Dietary restrictions
 
----
+### Vitals Tracking
+- Weight
+- Blood pressure
+- Blood sugar
+- Water intake
 
-### 3. **Project Architecture**
+### Messaging
+- Direct communication between clients and nutritionists
 
-**Suggested Folder Structure:**
+### Resources
+- Educational articles
+- Nutritional guides
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```sh
+git clone https://github.com/yourusername/nutriconnect.git
+cd nutriconnect
 ```
-mern-capstone/
-│-- backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── server.js
-│-- frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.js
-│-- README.md
+
+2. Install frontend dependencies
+```sh
+# In the root directory
+npm install
 ```
 
-**Essential Features to Implement:**
+3. Install backend dependencies
+```sh
+# Navigate to the backend directory
+cd backend
+npm install
+```
 
-- **Backend:**
-  - RESTful API with Express.js.
-  - MongoDB database schema design.
-  - JWT-based authentication.
-  - CRUD operations for core resources.
+4. Set up environment variables
+```sh
+# In the backend directory, copy the example .env
+cp .env.example .env
+```
 
-- **Frontend:**
-  - Responsive React UI.
-  - State management (React Context/Redux).
-  - API consumption using Axios.
-  - Routing with React Router.
+5. Start the backend server
+```sh
+# In the backend directory
+npm run dev
+```
 
----
+6. Start the frontend development server
+```sh
+# In the root directory
+npm run dev
+```
 
-### 4. **Implementation Timeline**
+7. Access the application at http://localhost:5173
 
-| Milestone             | Description                            | Suggested Timeframe |
-|----------------------|----------------------------------------|---------------------|
-| Project Setup         | Initialize the project, install dependencies | 1 Day               |
-| Backend Development  | API development and database setup    | 3 Days              |
-| Frontend Development | UI implementation and API integration | 3 Days              |
-| Testing & Debugging  | Unit and integration tests            | 2 Days              |
-| Deployment           | Deploy app on Vercel/Render           | 1 Day                |
+## 📝 API Documentation
 
----
+### Authentication Endpoints
+- `POST /api/users/register`: Register a new user
+- `POST /api/users/login`: Login a user
 
-### 5. **Deployment**
+### User Endpoints
+- `GET /api/users`: Get all users
+- `GET /api/users/:id`: Get user by ID
 
-**Steps for Deployment:**
+### Meal Plan Endpoints
+- `GET /api/meal-plans`: Get all meal plans
+- `GET /api/meal-plans/user/:userId`: Get user's meal plans
+- `GET /api/meal-plans/:id`: Get meal plan by ID
+- `POST /api/meal-plans`: Create meal plan
+- `PUT /api/meal-plans/:id`: Update meal plan
+- `DELETE /api/meal-plans/:id`: Delete meal plan
 
-- Deploy the backend on **Render** or **Heroku** with environment variables.
-- Deploy the frontend on **Vercel** or **Netlify**.
-- Test the live app and ensure all features work correctly.
+### Vitals Endpoints
+- `GET /api/vitals`: Get all vitals
+- `GET /api/vitals/user/:userId`: Get vitals by user ID
+- `GET /api/vitals/history/:userId`: Get vitals history
+- `POST /api/vitals`: Add vitals
 
-**Required Links:**
+### Resource Endpoints
+- `GET /api/resources`: Get all resources
+- `GET /api/resources/category/:category`: Get resources by category
+- `GET /api/resources/:id`: Get resource by ID
 
-- Live application URL.
-- GitHub repository URL (frontend and backend).
+### Messaging Endpoints
+- `GET /api/messages`: Get all messages
+- `GET /api/messages/user/:userId`: Get messages by user
+- `POST /api/messages`: Send message
 
----
+## 🔒 Authentication
 
-### 6. **Presentation and Documentation**
+NutriConnect uses JWT (JSON Web Tokens) for authentication. When a user logs in, the server returns a token that should be included in the Authorization header for all subsequent requests.
 
-**Deliverables:**
+Example:
+```
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
 
-1. **README.md file** should include:
-   - Project overview.
-   - Features list.
-   - Installation and usage guide.
-   - API documentation (if applicable).
-   - Screenshots of the project.
+## 🛣️ Roadmap
 
-2. **Presentation**
-   - 5-minute walkthrough of your project.
-   - Explain the problem, solution, and key features.
-   - Discuss challenges faced and future improvements.
+- **Integration with wearable devices** for automatic vital tracking
+- **Offline mode** for accessing meal plans without internet
+- **Multi-language support** for broader accessibility
+- **Mobile application** development
 
-**Recommended Tools:**
+## 👥 Contributing
 
-- Google Slides for presentation.
-- Loom for screen recording.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
----
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-### 7. **Evaluation Criteria**
+## 📄 License
 
-Your final project will be evaluated based on the following:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- **Functionality (30%)** – Does the application meet its intended purpose?
-- **Code Quality (20%)** – Is the code well-structured and maintainable?
-- **UI/UX (20%)** – Is the app visually appealing and user-friendly?
-- **Documentation (15%)** – Is the project well-documented?
-- **Presentation (15%)** – Is the project presented effectively?
+## 🙏 Acknowledgements
 
----
-
-### 8. **Submission**
-
-- Push your code to your GitHub repository.
-- Submit your GitHub and live project links.
-
----
+- [Shadcn UI](https://ui.shadcn.com/) for the UI components
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [React Query](https://tanstack.com/query) for data fetching
+- [Recharts](https://recharts.org/) for data visualization

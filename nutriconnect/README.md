@@ -1,4 +1,4 @@
-
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://week-8-capstone-project-and-presentation-k31vin.vercel.app)
 # NutriConnect 
 
 NutriConnect is a comprehensive nutrition management application designed specifically for pregnant women, providing personalized meal plans, health tracking, expert communication, and educational resources.
