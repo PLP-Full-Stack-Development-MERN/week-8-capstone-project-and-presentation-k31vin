@@ -40,7 +40,7 @@ const authService = {
     localStorage.removeItem('user');
   },
   
-  getCurrentUser: (): any => {
+  getCurrentUser: (): AuthResponse['user'] | null => {
     const userStr = localStorage.getItem('user');
     if (userStr) {
       return JSON.parse(userStr);
