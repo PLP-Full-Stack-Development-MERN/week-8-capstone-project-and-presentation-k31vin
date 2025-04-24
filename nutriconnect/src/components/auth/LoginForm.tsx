@@ -100,7 +100,6 @@ const LoginForm = () => {
         <div className="space-y-1 text-xs text-muted-foreground">
           <p>Client: client@example.com / password</p>
           <p>Nutritionist: nutritionist@example.com / password</p>
-          {/* <p>Admin: admin@example.com / password</p> */}
         </div>
       </div>
     </div>
