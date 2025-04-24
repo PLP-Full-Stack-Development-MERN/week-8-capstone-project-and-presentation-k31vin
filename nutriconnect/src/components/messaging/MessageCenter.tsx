@@ -61,7 +61,6 @@ const MessageCenter = () => {
 
   useEffect(() => {
     // In a real app, this would be an API call to get conversations
-    // For now, we'll use mock data
     const mockConversations: Conversation[] = user?.role === "client"
       ? [
           {
